@@ -1,278 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derby Tap Games - Epic Football Fan Battles</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            min-height: 100vh;
-        }
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .hero p {
-            font-size: 1.2em;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        .feature {
-            background: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 16px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        .feature h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            color: #e94560;
-        }
-        .feature p {
-            color: rgba(255,255,255,0.8);
-        }
-        .games-section {
-            margin: 50px 0;
-        }
-        .games-section h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #e94560;
-        }
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .game-card {
-            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            border: 2px solid #e94560;
-            transition: transform 0.3s ease;
-        }
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-        .game-card h4 {
-            font-size: 1.2em;
-            margin-bottom: 8px;
-        }
-        .game-card p {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9em;
-        }
-        .cta-section {
-            text-align: center;
-            padding: 50px 20px;
-            background: rgba(233, 69, 96, 0.1);
-            border-radius: 16px;
-            margin: 40px 0;
-        }
-        .cta-section h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        .store-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-        .store-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #000;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 1em;
-            transition: background 0.3s;
-        }
-        .store-btn:hover {
-            background: #333;
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-            margin: 40px 0;
-            padding: 30px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 16px;
-        }
-        .stat {
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #e94560;
-        }
-        .stat-label {
-            color: rgba(255,255,255,0.7);
-        }
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9em;
-        }
-        .footer a {
-            color: #e94560;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan League Tap - Football Fan Rankings</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.65;
+      color: #fff;
+      background: #071018;
+      min-height: 100vh;
+    }
+    .hero {
+      padding: 64px 20px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(0, 217, 255, 0.32), transparent 28%),
+        radial-gradient(circle at 84% 16%, rgba(255, 49, 151, 0.32), transparent 30%),
+        linear-gradient(135deg, #071018 0%, #101d2e 55%, #06110d 100%);
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 1;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.08rem;
+    }
+    .container { max-width: 1040px; margin: 0 auto; padding: 38px 20px 58px; }
+    .stats, .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      padding: 22px;
+      backdrop-filter: blur(10px);
+    }
+    .card h2, .card h3 { color: #fff; margin-bottom: 10px; }
+    .card p, .card li { color: rgba(255, 255, 255, 0.76); margin-bottom: 8px; }
+    ul { padding-left: 22px; }
+    .notice {
+      background: #fff;
+      color: #172033;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 34px 0;
+    }
+    .notice p { color: #42506a; margin-bottom: 10px; }
+    .notice strong { color: #101827; }
+    .links {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .links a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin: 6px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    footer {
+      color: rgba(255, 255, 255, 0.62);
+      text-align: center;
+      padding: 28px 20px 42px;
+      font-size: 0.92rem;
+    }
+    footer a { color: #9bdcff; margin: 0 8px; }
+  </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>⚽ Derby Tap Games</h1>
-        <p>Join millions of fans in the ultimate football rivalry battles. Tap for your team, climb the leaderboards, and prove which fanbase is the strongest!</p>
+  <header class="hero">
+    <h1>Fan League Tap</h1>
+    <p>Support your team, climb supporter rankings, and turn football fandom into a global tap competition.</p>
+  </header>
+
+  <main class="container">
+    <div class="stats">
+      <div class="card">
+        <h2>Country Leagues</h2>
+        <p>Choose from multiple fan leagues and support teams from around the world.</p>
+      </div>
+      <div class="card">
+        <h2>Fan Scoreboards</h2>
+        <p>Every tap adds to your team's in-app fan score and supporter race.</p>
+      </div>
+      <div class="card">
+        <h2>Reward Boosts</h2>
+        <p>Optional rewarded ads can add extra support after verification.</p>
+      </div>
     </div>
 
-    <div class="container">
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">10M+</div>
-                <div class="stat-label">Taps Per Match</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Epic Derbies</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Live Competition</div>
-            </div>
-        </div>
-
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">👆</div>
-                <h3>Tap to Win</h3>
-                <p>Simple, addictive gameplay. Every tap counts towards your team's victory!</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🏆</div>
-                <h3>Championships</h3>
-                <p>Best of 7 matches. Win 4 to become the ultimate champion!</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📊</div>
-                <h3>Leaderboards</h3>
-                <p>Compete with fans worldwide. See your rank among thousands!</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎁</div>
-                <h3>Bonus Rewards</h3>
-                <p>Watch ads to earn 1000 bonus taps and boost your team!</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <h3>Real-Time</h3>
-                <p>Live score updates. Watch the battle unfold in real-time!</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🌍</div>
-                <h3>Global Rivalries</h3>
-                <p>7 legendary derbies from around the world. Pick your battle!</p>
-            </div>
-        </div>
-
-        <div class="games-section">
-            <h2>🔥 Choose Your Derby</h2>
-            <div class="games-grid">
-                <div class="game-card">
-                    <h4>🇹🇷 FB vs GS</h4>
-                    <p>The Ultimate Istanbul Derby</p>
-                </div>
-                <div class="game-card">
-                    <h4>🇦🇷 Boca vs River</h4>
-                    <p>Boca Juniors vs River Plate</p>
-                </div>
-                <div class="game-card">
-                    <h4>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Celtic vs Rangers</h4>
-                    <p>Celtic vs Rangers</p>
-                </div>
-                <div class="game-card">
-                    <h4>🇷🇸 Zvezda vs Partizan</h4>
-                    <p>Crvena Zvezda vs Partizan</p>
-                </div>
-                <div class="game-card">
-                    <h4>🇹🇷 GS vs BJK</h4>
-                    <p>The Intercontinental Derby</p>
-                </div>
-                <div class="game-card">
-                    <h4>🇹🇷 BJK vs FB</h4>
-                    <p>The Black Eagles Derby</p>
-                </div>
-                <div class="game-card">
-                    <h4>🇧🇷 PAL vs COR</h4>
-                    <p>Palmeiras vs Corinthians</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cta-section">
-            <h2>Ready to Fight for Your Team?</h2>
-            <p>Download now and join the battle!</p>
-            <div class="store-buttons">
-                <a href="#" class="store-btn">
-                    🍎 App Store
-                </a>
-                <a href="#" class="store-btn">
-                    🤖 Google Play
-                </a>
-            </div>
-        </div>
+    <div class="features">
+      <div class="card">
+        <h3>Team-Based Competition</h3>
+        <p>Pick a side and help your club rise in the fan league.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Rankings</h3>
+        <p>See your supporter rank and compete with other fans.</p>
+      </div>
+      <div class="card">
+        <h3>Season Moments</h3>
+        <p>Celebrate top teams and leading supporters when a season ends.</p>
+      </div>
+      <div class="card">
+        <h3>Multi-Language Support</h3>
+        <p>Fan League Tap supports multiple languages for global fans.</p>
+      </div>
     </div>
 
-    <div class="footer">
-        <p>© 2026 Derby Tap Games. All rights reserved.</p>
-        <p>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="support.html">Support</a>
-            <a href="mailto:vahapunlu@gmail.com">Contact</a>
-        </p>
+    <section class="notice">
+      <p><strong>Important note:</strong> Fan League Tap rankings are based only on in-app fan support. They are not official football league standings and do not represent real match results.</p>
+      <p>Fan League Tap is published by Derby Tap Games.</p>
+    </section>
+
+    <div class="links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:vahapunlu@gmail.com">Contact</a>
     </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Derby Tap Games. All rights reserved.
+    <br>
+    <a href="./">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </footer>
 </body>
 </html>
